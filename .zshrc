@@ -6,7 +6,7 @@ PROMPT='
 # ----- ディレクトリ移動 -----
 setopt share_history		# 他のターミナルと履歴を共有
 setopt histignorealldups	# 履歴に重複を表示しない
-setopt auto_cd			# cd コマンドを省略して、ディレクトリ名のみで移動
+# setopt auto_cd			# cd コマンドを省略して、ディレクトリ名のみで移動
 setopt auto_pushd		# 自動で pushd を実行
 setopt pushd_ignore_dups	# pushd から重複を削除
 # setopt correct			# コマンドミスを修正
@@ -40,7 +40,7 @@ zstyle ':completion:*:default' match-list 'm:{a-z}={A-Z}'	# 大文字小文字�
 # zstyle ':predict' verbose true
 
 # ----- ls コマンドカスタマイズ -----
-chpwd() { ls -ltrGF }		# 更新時間の降順にソートしてカラーでリスト表示
+chpwd() { ls -lAGF }		# 更新時間の降順にソートしてカラーでリスト表示
 alias la='ls -lAGF'
 
 # ----- ファイル一括リネーム -----
